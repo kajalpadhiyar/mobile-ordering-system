@@ -1,0 +1,50 @@
+[
+  {
+    "P_Id": 1,
+    "C_Name": "Redmi",
+    "M_Name": "Note10",
+    "Ram": [
+      8
+    ],
+    "Storage": [
+      128
+    ],
+    "Color": [
+      "White"
+    ],
+    "Store": "Mumbai"
+  },
+  {
+    "P_Id": 2,
+    "C_Name": "Redmi",
+    "M_Name": "Note9",
+    "Ram": [
+      8
+    ],
+    "Storage": [
+      128
+    ],
+    "Color": [
+      "White"
+    ],
+    "Store": "Mumbai"
+  },
+  {
+    "P_Id": 3,
+    "C_Name": "Oppo",
+    "M_Name": "abc",
+    "Ram": [
+      6,
+      8
+    ],
+    "Storage": [
+      64,
+      128
+    ],
+    "Color": [
+      "pink",
+      "black"
+    ],
+    "Store": "Mumbai"
+  }
+]

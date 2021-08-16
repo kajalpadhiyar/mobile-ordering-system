@@ -11,14 +11,14 @@ namespace MobileStore
     class SignUp
     {
         static List<Customer.kCustomer> LCustomer = Customer.CustomerList();
-        //static List<Product.kProduct> LProduct = Product.ProductList();
+        static List<Product.kProduct> LProduct = Product.ProductList();
         public static void Signup()
         {
             Console.Write("Enter First Name: ");
             string firstName = Console.ReadLine();
             Console.Write("Enter Last Name: ");
             string lastName = Console.ReadLine();
-            Console.Write("Enter Location: ");
+            Console.Write("Enter prefered store Location: ");
             string location = Console.ReadLine();
             Console.Write("Please enter birth date (yyyy/mm/dd): ");
             DateTime dob = DateTime.Parse(Console.ReadLine());
@@ -80,9 +80,9 @@ namespace MobileStore
             }
             else if(firstName == "Admin" && lastName == "Admin")
             {
-                Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Exit");
+                Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
                 int choice = int.Parse(Console.ReadLine());
-                while (choice != 3)
+                while (choice != 4)
                 {
                     switch (choice)
                     {
@@ -110,7 +110,7 @@ namespace MobileStore
                             {
                                 Console.WriteLine($"Customer's First Name : {sfirstName}\nLast Name : {slastName}\n Location : {slocation}\n Dob : {sdob}");
                             }
-                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add Product\nClick 4: Exit");
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
                             choice = int.Parse(Console.ReadLine());
                             break;
 
@@ -122,41 +122,84 @@ namespace MobileStore
                                     Console.WriteLine($"Id : {o.Id}\tFirst Name : {o.FirstName.ToString()}\tLast Name : {o.LastName.ToString()}\tLocation : {o.Location.ToString()}\tDob : {o.Dob.ToShortDateString()}\n");
                                 }
                             }
-                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Exit");
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
                             choice = int.Parse(Console.ReadLine());
                             break;
 
                         case 3:
-                           /* Console.Write("Enter Mobile Name: ");
-                            string m_name = Console.ReadLine();
                             Console.Write("Enter Mobile Company: ");
-                            string c_name = Console.ReadLine();
-                            Console.Write("Enter RAM: ");
-                            string ram = Console.ReadLine();
-                            Console.Write("Enter Storage(ROM): ");
-                            string storage = Console.ReadLine();
+                             string c_name = Console.ReadLine();
                             Console.Write("Enter Mobile Name: ");
-                            string store = Console.ReadLine();
-                            int p_id = 0;
-
-                            foreach (var kproducts in LProduct)
+                            string m_name = Console.ReadLine();
+                            //array list for ram
+                            List<int> ram_list = new List<int>();
+                            Console.Write("Enter number of RAM's you want to add: ");
+                            int ram_n = int.Parse(Console.ReadLine());
+                            for (int i = 0; i < ram_n; i++)
                             {
-                                p_id = kproducts.P_Id + 1;
-                                //Console.WriteLine(id);
+                                Console.Write("Enter RAM: ");
+                                ram_list.Add(int.Parse(Console.ReadLine()));
+                            }
+                            //array list for rom
+                            List<int> rom_list = new List<int>();
+                            Console.Write("Enter number of ROM's you want to add: ");
+                            int rom_n = int.Parse(Console.ReadLine());
+                            for (int i = 0; i < rom_n; i++)
+                            {
+                                Console.Write("Enter ROM: ");
+                                rom_list.Add(int.Parse(Console.ReadLine()));
+                            }
+                            //array list for color
+                            List<String> c_list = new List<String>();
+                            Console.Write("Enter number of colors you want to add: ");
+                            int n = int.Parse(Console.ReadLine());
+                            for (int i = 0; i < n; i++)
+                            {
+                                Console.Write("Enter color: ");
+                                c_list.Add(Console.ReadLine());
                             }
 
-                            Product.kProduct dcustomer = new Product.kProduct()
+                            Console.Write("Enter store: ");
+                             string store = Console.ReadLine();
+
+                             int p_id = LProduct.Count() + 1;
+                            //assigning values to the keys
+                             Product.kProduct dproduct = new Product.kProduct()
+                             {
+                                 P_Id = p_id,
+                                 C_Name = c_name,
+                                 M_Name = m_name,
+                                 Ram = ram_list,
+                                 Storage = rom_list,
+                                 Color = c_list,
+                                 Store = store
+                             };
+                             int s_flag = 0;
+                            foreach (var o in LProduct)
                             {
-                                P_Id = p_id,
-                                M_Name = m_name,
-                                C_Name = lastName,
-                                Location = location,
-                                Dob = dob
-                            };
-                            int flag = 0;*/
+                                if (o.C_Name.ToString() == c_name && o.M_Name.ToString() == m_name)
+                                {
+                                    s_flag = 1;
+                                }
+                            }
+                            if (s_flag == 0)
+                            {
+                                //add into the list then store into json
+                                LProduct.Add(dproduct);
+                                var jsonString = JsonConvert.SerializeObject(LProduct, Newtonsoft.Json.Formatting.Indented);
+                                File.WriteAllText(@"Product.json", jsonString);
+                                Console.WriteLine("Successfully Added");
+                            }
+                            else
+                            {
+                                Console.WriteLine("Already exist\nDisplay Information:");
+                                //Console.WriteLine($"First Name : {firstName}\nLast Name : {lastName}\n Location : {location}\n Dob : {sdob}");
+                            }
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
+                            choice = int.Parse(Console.ReadLine());
                             break;
                         case 4:
-                            Console.WriteLine("Please click either 1 or 2");
+                            Console.WriteLine("Please click either 1 2 3");
                             break;
 
                     }
