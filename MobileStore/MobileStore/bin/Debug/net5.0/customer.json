@@ -1,0 +1,65 @@
+[
+  {
+    "Id": 1,
+    "FirstName": "Admin",
+    "LastName": "Admin",
+    "Location": "Mumbai",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 2,
+    "FirstName": "Piyu",
+    "LastName": "Zala",
+    "Location": "Dombivali",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 3,
+    "FirstName": "Kajal",
+    "LastName": "Padhiyar",
+    "Location": "Ghatkopar",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 4,
+    "FirstName": "Vidya",
+    "LastName": "Arumugam",
+    "Location": "Bhandup",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 5,
+    "FirstName": "Riya",
+    "LastName": "Manek",
+    "Location": "Mulund",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 6,
+    "FirstName": "Pri",
+    "LastName": "Singh",
+    "Location": "Kurla",
+    "Dob": "0001-01-01T00:00:00"
+  },
+  {
+    "Id": 7,
+    "FirstName": "Pooja",
+    "LastName": "Mishra",
+    "Location": "Kurla",
+    "Dob": "2000-02-25T00:00:00"
+  },
+  {
+    "Id": 8,
+    "FirstName": "Nisha",
+    "LastName": "Padhiyar",
+    "Location": "Mumbai",
+    "Dob": "2000-10-11T00:00:00"
+  },
+  {
+    "Id": 9,
+    "FirstName": "Samuel",
+    "LastName": "Joy",
+    "Location": "Mumbai",
+    "Dob": "2000-02-11T00:00:00"
+  }
+]
