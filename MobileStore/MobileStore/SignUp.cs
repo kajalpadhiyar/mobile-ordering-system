@@ -80,9 +80,9 @@ namespace MobileStore
             }
             else if(firstName == "Admin" && lastName == "Admin")
             {
-                Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
+                Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: View all Products\nClick 5: Exit");
                 int choice = int.Parse(Console.ReadLine());
-                while (choice != 4)
+                while (choice != 5)
                 {
                     switch (choice)
                     {
@@ -110,7 +110,7 @@ namespace MobileStore
                             {
                                 Console.WriteLine($"Customer's First Name : {sfirstName}\nLast Name : {slastName}\n Location : {slocation}\n Dob : {sdob}");
                             }
-                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: View all Products\nClick 5: Exit");
                             choice = int.Parse(Console.ReadLine());
                             break;
 
@@ -122,7 +122,7 @@ namespace MobileStore
                                     Console.WriteLine($"Id : {o.Id}\tFirst Name : {o.FirstName.ToString()}\tLast Name : {o.LastName.ToString()}\tLocation : {o.Location.ToString()}\tDob : {o.Dob.ToShortDateString()}\n");
                                 }
                             }
-                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: View all Products\nClick 5: Exit");
                             choice = int.Parse(Console.ReadLine());
                             break;
 
@@ -192,14 +192,22 @@ namespace MobileStore
                             }
                             else
                             {
-                                Console.WriteLine("Already exist\nDisplay Information:");
-                                //Console.WriteLine($"First Name : {firstName}\nLast Name : {lastName}\n Location : {location}\n Dob : {sdob}");
+                                Console.WriteLine("Already exist");
                             }
-                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: Exit");
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: View all Products\nClick 5: Exit");
                             choice = int.Parse(Console.ReadLine());
                             break;
                         case 4:
-                            Console.WriteLine("Please click either 1 2 3");
+                            //iterate list to display all products
+                            foreach (var o in LProduct)
+                            {
+                                    Console.WriteLine($"Product Id : {o.P_Id}\tCompany Name : {o.C_Name}\tMobile Name : {o.M_Name}\tRAM : {string.Join(", ",o.Ram.ToArray())}\tROM : {string.Join(", ", o.Storage.ToArray())}\tColors : {string.Join(", ", o.Color.ToArray())}\tStore Location : {o.Store}\n");
+                            }
+                            Console.WriteLine("Click 1: Search Customer by first and last name\nClick 2: View all customers\nClick 3: Add a Product\nClick 4: View all Products\nClick 5: Exit");
+                            choice = int.Parse(Console.ReadLine());
+                            break;
+                        case 5:
+                            Console.WriteLine("Please click either 1 2 3 4");
                             break;
 
                     }
