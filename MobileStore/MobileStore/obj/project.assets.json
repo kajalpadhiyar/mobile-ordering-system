@@ -53,11 +53,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Kajal Padhiyar\\Documents\\DotNet\\MobileStore\\MobileStore\\MobileStore.csproj",
+      "projectUniqueName": "C:\\Users\\Kajal Padhiyar\\Documents\\DotnetProj\\mobile-ordering-system\\MobileStore\\MobileStore\\MobileStore.csproj",
       "projectName": "MobileStore",
-      "projectPath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotNet\\MobileStore\\MobileStore\\MobileStore.csproj",
+      "projectPath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotnetProj\\mobile-ordering-system\\MobileStore\\MobileStore\\MobileStore.csproj",
       "packagesPath": "C:\\Users\\Kajal Padhiyar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotNet\\MobileStore\\MobileStore\\obj\\",
+      "outputPath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotnetProj\\mobile-ordering-system\\MobileStore\\MobileStore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Kajal Padhiyar\\AppData\\Roaming\\NuGet\\NuGet.Config",

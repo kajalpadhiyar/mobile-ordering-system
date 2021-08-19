@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K5plFgF7Tbh1woH8t1U9FHg3H1m0aMvtwQSGB3w5nFbMkOX/6pU6fkOsNYKtlCnxrxhk16zu15VWTn3BcUMfnw==",
+  "dgSpecHash": "blKM5ZYUnRiHM7/Yhpve8CNY+enT71XtbiLyA5WJQW6M3z0Sy729yxXiM5/rxzb2xhsFkZ3aTme/u2/veEsQ5w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotNet\\MobileStore\\MobileStore\\MobileStore.csproj",
+  "projectFilePath": "C:\\Users\\Kajal Padhiyar\\Documents\\DotnetProj\\mobile-ordering-system\\MobileStore\\MobileStore\\MobileStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kajal Padhiyar\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
   ],

@@ -20,11 +20,11 @@ namespace MobileStore
             switch (choice)
             {
                 case 1:
-                    SignUp.Signup();
+                    Home.Signup();
                     break;
 
                 case 2:
-                    SignUp.Login();
+                    Home.Login();
                     break;
 
                 default:

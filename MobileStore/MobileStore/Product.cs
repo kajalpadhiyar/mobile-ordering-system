@@ -11,20 +11,32 @@ namespace MobileStore
     class Product
     {
 
-        public struct kProduct
+        public struct kMumbai
         {
             public int P_Id { get; set; }
             public string C_Name { get; set; }
             public string M_Name { get; set; }
-            public List<int> Ram { get; set; }
-            public List<int> Storage { get; set; }
-            public List<String> Color { get; set; }
+            //public List<int> Ram { get; set; }
+            public int Ram { get; set; }
+            public int Storage { get; set; }
+            public String Color { get; set; }
             public string Store { get; set; }
+            public int Price { get; set; }
+            public string Store_Count { get; set; }
         }
+        public struct oMumbai
+        {
+            public int P_Id { get; set; }
+            public string C_Name { get; set; }
+            public string M_Name { get; set; }
+            //public List<int> Ram { get; set; }
+            public int Ram { get; set; }
+            public int Storage { get; set; }
+            public String Color { get; set; }
+            public string Store { get; set; }
+            public int Price { get; set; }
 
-            public static List<kProduct> ProductList()
-            {
-                return JsonConvert.DeserializeObject<List<kProduct>>(File.ReadAllText(@"Product.json"));
-            }
+            public string Cust { get; set; }
         }
     }
+}
