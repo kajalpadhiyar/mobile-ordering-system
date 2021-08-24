@@ -37,6 +37,7 @@ namespace MobileStore
             public int Price { get; set; }
 
             public string Cust { get; set; }
+            public bool Buy { get; set; }
         }
     }
 }

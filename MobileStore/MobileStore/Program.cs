@@ -15,6 +15,7 @@ namespace MobileStore
         }
         public static void Firstpg()
         {
+            Console.WriteLine("\n<-------Welcome to our Mobile Store------>\n");
             Console.WriteLine("Click 1: Sign up\nClick 2: Login\nClick 3: Exit");
             int choice = int.Parse(Console.ReadLine());
             switch (choice)

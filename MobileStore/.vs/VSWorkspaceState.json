@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MobileStore",
+    "\\MobileStoreTest"
   ],
-  "SelectedNode": "\\MobileStore",
+  "SelectedNode": "\\MobileStoreTest",
   "PreviewInSolutionExplorer": false
 }

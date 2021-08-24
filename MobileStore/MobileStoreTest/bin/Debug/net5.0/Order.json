@@ -1,57 +1,14 @@
 [
   {
-    "P_Id": 7,
-    "C_Name": "Oppo",
-    "M_Name": "Note10",
-    "Ram": 8,
-    "Storage": 128,
-    "Color": "Black",
-    "Store": "Pune",
-    "Price": 0,
-    "Cust": "Kajal"
-  },
-  {
-    "P_Id": 5,
-    "C_Name": "Oppo",
-    "M_Name": "Note10",
-    "Ram": 8,
+    "P_Id": 3,
+    "C_Name": "Samsung Galaxy",
+    "M_Name": "F62",
+    "Ram": 6,
     "Storage": 128,
     "Color": "White",
     "Store": "Pune",
-    "Price": 0,
-    "Cust": "Kajal"
-  },
-  {
-    "P_Id": 6,
-    "C_Name": "Redmi",
-    "M_Name": "Note11",
-    "Ram": 8,
-    "Storage": 128,
-    "Color": "Pink",
-    "Store": "Mumbai",
-    "Price": 0,
-    "Cust": "Kajal"
-  },
-  {
-    "P_Id": 4,
-    "C_Name": "Oppo",
-    "M_Name": "Note10",
-    "Ram": 8,
-    "Storage": 128,
-    "Color": "Black",
-    "Store": "Pune",
-    "Price": 0,
-    "Cust": "Kajal"
-  },
-  {
-    "P_Id": 3,
-    "C_Name": "Redmi",
-    "M_Name": "Note5",
-    "Ram": 8,
-    "Storage": 128,
-    "Color": "Pink",
-    "Store": "Mumbai",
-    "Price": 0,
-    "Cust": "Kajal"
+    "Price": 20000,
+    "Cust": "Lucky",
+    "Buy": false
   }
 ]

@@ -1,24 +1,57 @@
 [
   {
     "P_Id": 1,
-    "C_Name": "Oppo",
-    "M_Name": "Note10",
+    "C_Name": "Redmi",
+    "M_Name": "Note12",
     "Ram": 8,
     "Storage": 128,
     "Color": "Black",
-    "Store": "Pune",
-    "Price": 0,
-    "Store_Count": ""
+    "Store": "Mumbai",
+    "Price": 25000,
+    "Store_Count": "REDMI_NODE12_8_128_BLACK_MUMBAI"
   },
   {
     "P_Id": 2,
-    "C_Name": "Oppo",
-    "M_Name": "Note10",
-    "Ram": 8,
+    "C_Name": "Samsung",
+    "M_Name": "F62",
+    "Ram": 6,
     "Storage": 128,
     "Color": "White",
     "Store": "Pune",
-    "Price": 0,
-    "Store_Count": ""
+    "Price": 20000,
+    "Store_Count": "SAMSUNG GALAXY_F62_6_128_WHITE_PUNE"
+  },
+  {
+    "P_Id": 4,
+    "C_Name": "Redmi",
+    "M_Name": "Note10",
+    "Ram": 6,
+    "Storage": 128,
+    "Color": "Pink",
+    "Store": "Pune",
+    "Price": 18000,
+    "Store_Count": "REDMI_NOTE10_6_128_PINK_PUNE"
+  },
+  {
+    "P_Id": 5,
+    "C_Name": "Oppo",
+    "M_Name": "F11",
+    "Ram": 8,
+    "Storage": 128,
+    "Color": "Green",
+    "Store": "Mumbai",
+    "Price": 10000,
+    "Store_Count": "OPPO_F11_8_128_GREEN_MUMBAI"
+  },
+  {
+    "P_Id": 6,
+    "C_Name": "Oppo",
+    "M_Name": "F17",
+    "Ram": 6,
+    "Storage": 128,
+    "Color": "Orange",
+    "Store": "Thane",
+    "Price": 17000,
+    "Store_Count": "OPPO_F17_6_128_ORANGE_THANE"
   }
 ]

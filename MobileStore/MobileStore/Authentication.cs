@@ -9,54 +9,65 @@ using System.Threading.Tasks;
 
 namespace MobileStore
 {
-    public class Authentication
+    public static class Authentication
     {
-        static Customer.kCustomer customerData = new Customer.kCustomer();
-        static List<Customer.kCustomer> LCustomer = JsonConvert.DeserializeObject<List<Customer.kCustomer>>(File.ReadAllText(@"customer.json"));
+        private static Customer.kCustomer customerData = new Customer.kCustomer();
+        private static List<Customer.kCustomer> LCustomer = JsonConvert.DeserializeObject<List<Customer.kCustomer>>(File.ReadAllText(@"customer.json"));
+
+
+        public static void SignUp()
+        {
+            Console.WriteLine("<----- SignUp Page ----->\n");
+            AuthenticateID();
+            AuthenticateUsername();
+            AuthenticatePassword();
+            AuthenticateRest();
+            AuthenticateMobile();
+            AuthenticateDOB();
+            Register();
+        }
 
         //ID
-        public static void AuthenticateID()
+        private static void AuthenticateID()
         {
             int id = LCustomer.Count + 1;
             customerData.Id = id;
-
         }
 
         //Username
-        public static void AuthenticateUsername()
+        private static void AuthenticateUsername()
         {
             Console.WriteLine("\nEnter UserName:");
             string username = Console.ReadLine().ToLower();
-            
-            bool found = false;
-            foreach(var o in LCustomer)
-            {
-                if (o.Username == username)
-                   found = true;
-            }
 
-            if (username.Length < 3 || username.Length > 10)
-            { 
-                Console.WriteLine("\nUsername length must be greater than 3 or less than 10");
-                AuthenticateUsername();
-            }
-            else if(found){
-                Console.WriteLine("\nUsername must be unique, try another username.");
-                AuthenticateUsername();
-            }
-            else
+            try
             {
+                foreach (var o in LCustomer)
+                {
+                    if (o.Username == username)
+                        throw new AuthenticationException(username);
+                }
+                if (username.Length < 3 || username.Length > 10)
+                {
+                    throw new AuthenticationException(username, username.Length);
+                }
                 customerData.Username = username;
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                AuthenticateUsername();
+            }
+
         }
 
         //Password
-        public static void AuthenticatePassword()
+        private static void AuthenticatePassword()
         {
             Console.WriteLine("\nEnter Password: (After Entering Password press 'Enter')");
             string password = null;
 
-            while (true)
+            while (true)  //hides the typed characters while typing password
             {
                 var key = Console.ReadKey(true);
                 if (key.Key == ConsoleKey.Enter)    // this loop breaks when user presses enter
@@ -66,43 +77,50 @@ namespace MobileStore
             }
             Console.CursorVisible = true;
 
-            if (password.Length < 6 || password.Length > 12)
-            { 
-                Console.WriteLine("\nPassword length must be greater than 3 or less than 10");
-                AuthenticatePassword();
-            }
-            else
+            try
             {
+                if (password.Length < 6 || password.Length > 12)
+                {
+                    throw new AuthenticationException(password.Length);
+                }
                 customerData.Password = password;
             }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                AuthenticatePassword();
+            }
+
             Console.WriteLine("");
         }
 
         //Mobile Number
-        public static void AuthenticateMobile()
+        private static void AuthenticateMobile()
         {
             Console.WriteLine("\nEnter Mobile Number: ");
             string number = Console.ReadLine();
 
-            if (!int.TryParse(number, out var i))
+            try
             {
-                Console.WriteLine("\nEnter a valid number");
-                AuthenticateMobile();
-            }
-            else if (number.Length > 10 || number.Length < 10)
-            {
-                Console.WriteLine("\nNumber should be of 10 digits");
-                AuthenticateMobile();
-            }
-            else
-            {
+                if (!int.TryParse(number, out var i))
+                {
+                    throw new MobileException(number);
+                }
+                if (number.Length > 10 || number.Length < 10)
+                {
+                    throw new MobileException(number.Length);
+                }
                 customerData.Mobile = number;
             }
-
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                AuthenticateMobile();
+            }
         }
 
         //Date of Birth
-        public static void AuthenticateDOB()
+        private static void AuthenticateDOB()
         {
             Console.WriteLine("\nPlease enter birth date (yyyy/mm/dd): ");
             try
@@ -110,32 +128,41 @@ namespace MobileStore
                 DateTime dob = DateTime.Parse(Console.ReadLine());
                 customerData.Dob = dob;
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Enter your DOB properly (yyyy/mm/dd)");
+                Console.WriteLine(e.Message);
                 AuthenticateDOB();
             }
         }
 
         //Firstname, Lastname, Location
-        public static void AuthenticateRest(string firstname,string lastname,string location)
+        private static void AuthenticateRest()
         {
+            Console.WriteLine("\nEnter FirstName: ");
+            string firstname = Console.ReadLine();
+
+            Console.WriteLine("\nEnter LastName: ");
+            string lastname = Console.ReadLine();
+
+            Console.WriteLine("\nEnter Location: ");
+            string location = Console.ReadLine();
+
             customerData.FirstName = firstname;
             customerData.Lastname = lastname;
             customerData.Location = location;
         }
 
         //Adds the new account to the JSON file
-        public static void Register()
+        private static void Register()
         {
             LCustomer.Add(customerData);
             var jsonstring = JsonConvert.SerializeObject(LCustomer, Newtonsoft.Json.Formatting.Indented);
             File.WriteAllText(@"customer.json", jsonstring);
-            Console.WriteLine("Successfully created account...Please do the login");
-            Program.Firstpg();
+            Console.WriteLine("Successfully created account...Please do the login\n");
         }
-        
+
     }
+
 
 }
 

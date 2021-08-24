@@ -6,22 +6,12 @@
     "FirstName": "Admin",
     "Lastname": "Admin",
     "Mobile": "1234567890",
-    "Location": "mumbai",
+    "Location": "Mumbai",
     "Dob": "1999-12-21T00:00:00"
   },
   {
     "Id": 2,
-    "Username": "kajal",
-    "Password": "kajal12",
-    "FirstName": "kajal12",
-    "Lastname": "kajal12",
-    "Mobile": "1234567890",
-    "Location": "mumbai",
-    "Dob": "1999-12-21T00:00:00"
-  },
-  {
-    "Id": 3,
-    "Username": "samuel",
+    "Username": "samuel123",
     "Password": "Samuel",
     "FirstName": "Samuel",
     "Lastname": "Joy",
@@ -31,12 +21,42 @@
   },
   {
     "Id": 3,
-    "Username": "raj",
+    "Username": "raj123",
     "Password": "Bhosale",
-    "FirstName": "Raj",
+    "FirstName": "Rajjj",
     "Lastname": "Bhosale",
     "Mobile": "1234567890",
     "Location": "Thane",
     "Dob": "2000-02-11T00:00:00"
+  },
+  {
+    "Id": 4,
+    "Username": "lucky123",
+    "Password": "Lucky123",
+    "FirstName": "Lucky",
+    "Lastname": "Lucky",
+    "Mobile": "1234567890",
+    "Location": "Kurla",
+    "Dob": "2000-02-11T00:00:00"
+  },
+  {
+    "Id": 5,
+    "Username": "piyu123",
+    "Password": "Piyu123",
+    "FirstName": "Piyu",
+    "Lastname": "Zala",
+    "Mobile": "1234567890",
+    "Location": "Dombivali",
+    "Dob": "2000-02-11T00:00:00"
+  },
+  {
+    "Id": 6,
+    "Username": "kajal123",
+    "Password": "Kajal123",
+    "FirstName": "Kajal",
+    "Lastname": "Padhiyar",
+    "Mobile": "1234567890",
+    "Location": "Mumbai",
+    "Dob": "2000-10-11T00:00:00"
   }
 ]

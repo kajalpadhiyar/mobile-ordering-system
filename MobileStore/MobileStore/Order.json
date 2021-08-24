@@ -8,7 +8,8 @@
     "Color": "Black",
     "Store": "Pune",
     "Price": 0,
-    "Cust": "Kajal"
+    "Cust": "Kajal",
+    "Buy": false
   },
   {
     "P_Id": 5,
@@ -19,7 +20,8 @@
     "Color": "White",
     "Store": "Pune",
     "Price": 0,
-    "Cust": "Kajal"
+    "Cust": "Kajal",
+    "Buy": false
   },
   {
     "P_Id": 6,
@@ -30,7 +32,8 @@
     "Color": "Pink",
     "Store": "Mumbai",
     "Price": 0,
-    "Cust": "Kajal"
+    "Cust": "Kajal",
+    "Buy": false
   },
   {
     "P_Id": 4,
@@ -41,7 +44,8 @@
     "Color": "Black",
     "Store": "Pune",
     "Price": 0,
-    "Cust": "Kajal"
+    "Cust": "Kajal",
+    "Buy": false
   },
   {
     "P_Id": 3,
@@ -52,6 +56,19 @@
     "Color": "Pink",
     "Store": "Mumbai",
     "Price": 0,
-    "Cust": "Kajal"
+    "Cust": "Kajal",
+    "Buy": false
+  },
+  {
+    "P_Id": 1,
+    "C_Name": "Oppo",
+    "M_Name": "Note10",
+    "Ram": 8,
+    "Storage": 128,
+    "Color": "Black",
+    "Store": "Pune",
+    "Price": 0,
+    "Cust": "samuel",
+    "Buy": true
   }
 ]
